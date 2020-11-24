@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="ja"></html>
+
+<meta charset="UTF-8">
+
+<head>
+    <title>ECサイト風の静的ページを作ってみよう</title>
+
+    <link rel = "stylesheet" href ="index.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div id="top" class="banner">
+        <span id="name" class="">てすとぺーじ</span>
+
+        <span id="search" class="input">
+            <form method="get" action="http://www.google.co.jp/search" target="_blank">
+                <input id="search_input" type="text" name="q" maxlength="255" value="サイト内検索はまだだよ">
+                <input id="search_button" type="submit" name="btng" value="検索">
+                <input type="hidden" name="hl" value="ja">
+                </form>
+        </span>
+
+        <span id="login" class="buttom">
+            <form action="session1.php" method = "post">  
+                <input id="login_input"　type ="text" name="username" value = "username"><br /> 
+                <input id="login_pass" type = "text" name="pass" value = "password"><br />
+                <input id="login_button" type="submit" name ="login" value = "ログイン"> 
+            </form>
+        </span>
+
+    </div>
+
+    <div id="" class="sticky_container">
+        /概要/
+        <div id="concept" class="sticky">
+            ようこそ
+            
+        </div>
+
+        /*商品*/
+        <div id="goods" class="sticky">
+            商品を書こう
+            データベースの勉強して実装するか。
+            単に画像を載せるだけにするか。
+        </div>
+
+        /カート/
+        <div id="cart" class="sticky">
+            ここが鬼門
+            勉強せねば
+        </div>
+
+        /決済/
+        <div id="pay" class="sticky">
+            <div id="checker1">
+                <form id="cart1">
+                    <input type="radio" name="first" value="yes"　>購入しますか？
+                    <input type="submit" name="first">
+                </form>
+            </div>
+            pay palとかがワンチャン
+            できなければ、クリックでポップを表示するようにする
+            [カート内の商品一覧を表示]
+            [確認 y/n]
+            [決済方法を決定]
+            [確認 y/n]
+            [完了]
+            のシークエンスを実装できるとよい
+        </div>
+        /起業詳細（自己紹介）/
+        <div id="introduce" class="sticky">
+            俺の自己紹介を書くか
+        </div>
+
+        /Q&A/
+        <div id="qa" class="sticky">
+            適当なfaqを書いとこう
+        </div>
+
+    </div>
+
+    <footer>
+        おしまい
+    </footer>
+
+    <div id="check1" class="popup">
+        <form method="POST" action="決済確認" id="cart2">
+            本当に購入しますか？
+            <input type="radio" name="ok" value="yes" /> yes
+            <input type="radio" name="ok" value="no" /> no
+            <input type="submit" value="ok?" />
+        </form>
+    </div>
+
+    <div id="check2" class="popup">
+        <form method="POST" action="決済情報" id="cart3">
+            購入者情報を入力してください。
+            <div>name:
+                <input type="text" name="input" value="name" />
+            </div>
+            <div>address:
+                <input type="text" name="input" value="address" />
+            </div>
+            <div>tel:
+                <input type="tel" name="input" value="tel" />
+            </div>
+            <input type="submit" value="ok?" />
+        </form>
+    </div>
+    
+
+</body>
+
