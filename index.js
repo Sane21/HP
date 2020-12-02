@@ -16,9 +16,9 @@ $(function(){
 
 
     if(cart2result.value === ""){
-        $('#check2').css('display', 'none');
+        $('#check2').css('opacity', '0');
     }else{
-        $('#check2').css('display', 'inline'); 
+        $('#check2').css('opacity', '1'); 
     }
 
 
